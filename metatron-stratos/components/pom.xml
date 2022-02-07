@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+       Licensed to the Apache Software Foundation (ASF) under one
+       or more contributor license agreements.  See the NOTICE file
+       distributed with this work for additional information
+       regarding copyright ownership.  The ASF licenses this file
+       to you under the Apache License, Version 2.0 (the
+       "License"); you may not use this file except in compliance
+       with the License.  You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+       Unless required by applicable law or agreed to in writing,
+       software distributed under the License is distributed on an
+       "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+       KIND, either express or implied.  See the License for the
+       specific language governing permissions and limitations
+       under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.apache.stratos</groupId>
+        <artifactId>stratos-parent</artifactId>
+        <version>4.1.5-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>stratos-components-parent</artifactId>
+    <packaging>pom</packaging>
+    <name>Apache Stratos - Components</name>
+    <description>Apache Stratos - Aggregator pom for Components</description>
+
+    <modules>
+        <module>org.apache.stratos.common</module>
+        <module>org.apache.stratos.messaging</module>
+        <module>org.apache.stratos.autoscaler</module>
+        <module>org.apache.stratos.cloud.controller</module>
+        <module>org.apache.stratos.kubernetes.client</module>
+        <module>org.apache.stratos.manager</module>
+        <module>org.apache.stratos.cli</module>
+        <module>org.apache.stratos.python.cartridge.agent</module>
+        <module>org.apache.stratos.python.cli</module>
+        <module>org.apache.stratos.cartridge.agent</module>
+        <module>org.apache.stratos.load.balancer.common</module>
+        <module>org.apache.stratos.load.balancer</module>
+        <module>org.apache.stratos.load.balancer.extension.api</module>
+        <module>org.apache.stratos.rest.endpoint</module>
+        <module>org.apache.stratos.manager.styles</module>
+        <module>org.apache.stratos.custom.handlers</module>
+        <module>org.apache.stratos.metadata.service</module>
+        <module>org.apache.stratos.metadata.client</module>
+        <module>org.apache.stratos.mock.iaas</module>
+        <module>org.apache.stratos.mock.iaas.api</module>
+        <module>org.apache.stratos.mock.iaas.client</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>coverage-per-test</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <configuration>
+                            <properties>
+                                <property>
+                                    <name>listener</name>
+                                    <value>org.sonar.java.jacoco.JUnitListener</value>
+                                </property>
+                            </properties>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>
