@@ -107,7 +107,6 @@ a service instance.
 Administrators and tenants can use the Stratos Manager console, which is a web-based UI management console in Stratos,
 to interact with Stratos.
 <br />
-For more information, see [Stratos Manager](https://cwiki.apache.org/confluence/display/STRATOS/4.1.x+Stratos+Manager).
 
 * Stratos REST API                                      <br />
 DevOps can use REST APIs to carry out various administering functions (e.g., adding a tenant, adding a cartridge, etc.).
