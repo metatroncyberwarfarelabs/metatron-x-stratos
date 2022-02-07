@@ -47,13 +47,11 @@ Cloud Controller (CC) leverages Metatron jclouds' APIs and provides a generic in
 The Auto-scaler uses a Complex Event Processor (CEP) for real-time decision making, and it integrates both real-time
 and rule-base decision making to provide better control over scaling of platforms. Stratos allows users to define
 auto-scaling policies with multiple factors,i.e., requests in flight, memory consumption and load average, which are
-considered when scaling up or down. The Auto-scaler also supports scaling for non-HTTP transport.
-<br />
+considered when scaling up or down. The Auto-scaler also supports scaling for non-HTTP transport.    
 
 * Smart policies                                        <br />
 The Auto-scaler in Stratos uses two smart policies when making auto-scaling decisions: auto-scaling policy and deployment policy.
 The instances will be automatically spawned based on the smart policies that are applied to the application.
-<br />
 
 * Multiple IaaS support                                 <br />
 Apache Stratos is tested on the following IaaS providers: AWS EC2 and OpenStack. However, it is very easy to extend
@@ -85,7 +83,6 @@ PHP, MySQL, Ruby, Node.js, Wordpress, Drupal, Tomcat, HAProxy and NGINX.
 A cartridge is a package of code that includes a Virtual Machine (VM) image plus additional configuration, which can
 be plugged into Stratos to offer a new PaaS service. Stratos supports single tenant and multi-tenant cartridges.
 If needed, tenants can easily add their own cartridges to Stratos.
-<br />
 
 * Cartridge automation using Puppet                     <br />
 Cartridges can be easily configured with the use of an orchestration layer such as Puppet.
@@ -93,7 +90,6 @@ Cartridges can be easily configured with the use of an orchestration layer such 
 * Support for third party load balancers                <br />
 Stratos supports third-party load balancers (LBs), i.e, HAProxy, NGINX. Thereby, if required, users can use their own
 LB with Stratos.
-<br />
 
 * Artifact distribution coordination                    <br />
 The Artifact Distribution Coordinator is responsible for the distribution of artifacts. Artifacts can be uploaded
@@ -101,20 +97,16 @@ using git push. When a trigger event happens the ADC will find the correct match
 topology and send notifications to appropriate Cartridge instances. ADC supports external Git repositories and GitHub
 repositories based deployment synchronization. Users are able to use their own Git repository to sync artifacts with
 a service instance.
-<br />
 
 * Stratos Manager Console                               <br />
 Administrators and tenants can use the Stratos Manager console, which is a web-based UI management console in Stratos,
 to interact with Stratos.
-<br />
 
 * Stratos REST API                                      <br />
 DevOps can use REST APIs to carry out various administering functions (e.g., adding a tenant, adding a cartridge, etc.).
-<br />
 
 * Interactive CLI Tool                                  <br />
 Command Line Interface (CLI) tool provides users an interface to interact with Stratos and manage your applications.
-<br />
 
 * Monitoring and metering                               <br />
 Apache Stratos provides centralized monitoring and metering. The level of resource utilization in Stratos is measured using metering.
@@ -122,7 +114,6 @@ Apache Stratos provides centralized monitoring and metering. The level of resour
 * Persistent volume support for cartridges              <br />
 If required, the DevOps can enable a persistent volume for cartridges. If persistent volume is enabled, Apache Stratos
 automatically attaches a volume when a new cartridge instance is created.
-<br />
 
 * Gracefully shutdown instances                         <br />
 Before terminating an instance, when scaling down, the Auto-scaler will allow all the existing requests to the instance
