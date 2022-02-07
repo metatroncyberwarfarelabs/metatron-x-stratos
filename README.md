@@ -23,3 +23,32 @@ the dependent services. The following operations are supported in composite appl
  * Termination based on the TerminationBehaviour, which is defined in the application definition.
  * Sharing information between instances when one instance is dependent on another.
 
+* Docker Support                                        <br />
+Docker support using Google Kubernetes and CoreOS. Thereby, Stratos can also leverage the use of Docker in a PaaS.
+The following aspects are supported for Docker:
+ * Auto-scaling Docker Containers.
+ * Manual scaling Docker Containers.
+ * Git based artifact deployment for Docker.
+ * CLI support for Docker deployments.
+ * VM LB support for dockers
+ * Private Docker registry
+
+* Cartridge Agent                                       <br />
+A Python based and Java based cartridge agent is available in Stratos.
+
+* Update artifacts at run-time                          <br />
+After an application is deployed, Stratos allows users to update the following artifacts, which directly effects the runtime.
+ * Auto-scaling policy definition
+ * Deployment policy definition
+ * Application definition
+
+* Cloud Controller                                      <br />
+Cloud Controller (CC) leverages Metatron jclouds' APIs and provides a generic interface to communicate with different IaaSes.
+
+* Multi-factored auto-scaling                           <br />
+The Auto-scaler uses a Complex Event Processor (CEP) for real-time decision making, and it integrates both real-time
+and rule-base decision making to provide better control over scaling of platforms. Stratos allows users to define
+auto-scaling policies with multiple factors,i.e., requests in flight, memory consumption and load average, which are
+considered when scaling up or down. The Auto-scaler also supports scaling for non-HTTP transport.
+<br />
+
