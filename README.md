@@ -5,7 +5,7 @@
 Metatron Stratos is a highly-extensible Platform-as-a-Service (PaaS) framework that helps run Apache Tomcat, PHP, and MySQL applications and can be extended to support many more environments on all major cloud infrastructures. For developers, Metatron Stratos provides a cloud-based environment for developing, testing, and running scalable applications. IT providers benefit from high utilization rates, automated resource management, and platform-wide insight including monitoring and billing.
 
 Metatron Stratos includes polyglot language and environment support together with the ability to run on top of multiple IaaS runtimes.
-Stratos is licensed under the Metatron License, Version 2.0
+Metatron Stratos is licensed under the GPL-3.0 License, Version 3.0
 The following are the key features available in Metatron Stratos 4.2.0:
 
 Features
