@@ -1,0 +1,406 @@
+{
+  "id": "metering-dashboard",
+  "title": "Metering Dashboard",
+  "description": "This dashboard is to show metering data.",
+  "permissions": {
+    "viewers": [
+      "Internal/everyone"
+    ],
+    "editors": [
+      "Internal/everyone"
+    ]
+  },
+  "pages": [
+    {
+      "id": "landing",
+      "title": "Member Status",
+      "layout": {
+        "content": {
+          "loggedIn": {
+            "blocks": [
+              {
+                "id": "a",
+                "col": 1,
+                "row": 1,
+                "size_x": 12,
+                "size_y": 2,
+                "banner": false
+              },
+              {
+                "id": "b",
+                "col": 1,
+                "row": 3,
+                "size_x": 12,
+                "size_y": 5,
+                "banner": false
+              },
+              {
+                "id": "c",
+                "col": 1,
+                "row": 8,
+                "size_x": 12,
+                "size_y": 7,
+                "banner": false
+              }
+            ]
+          }
+        },
+        "fluidLayout": false
+      },
+      "isanon": false,
+      "content": {
+        "default": {
+          "a": [
+            {
+              "id": "1icvhwkddx3p8gifyhmjpxpqfr",
+              "content": {
+                "id": "Member_Status_Filter",
+                "title": "",
+                "type": "gadget",
+                "thumbnail": "store://gadget/Member_Status_Filter/index.png",
+                "data": {
+                  "url": "store://gadget/Member_Status_Filter/index.xml"
+                },
+                "styles": {
+                  "height": "150",
+                  "borders": false,
+                  "titlePosition": "left",
+                  "title": ""
+                },
+                "notify": {
+                  "member-status-filter": {
+                    "type": "address",
+                    "description": "This notifies time interval"
+                  },
+                  "cancel": {
+                    "type": "boolean",
+                    "description": "This notifies cancellation of state selection"
+                  }
+                },
+                "options": {},
+                "locale_titles": {
+                  "en-US": ""
+                },
+                "settings": {}
+              }
+            }
+          ],
+          "b": [
+            {
+              "id": "psipny83avcxvr5fi1dasv2t9",
+              "content": {
+                "id": "Member_Count",
+                "title": "Member Count",
+                "type": "gadget",
+                "thumbnail": "local://images/gadgetIcon.png",
+                "data": {
+                  "url": "local://store/carbon.super/gadget/Member_Count/index.xml"
+                },
+                "listen": {
+                  "member-status-filter": {
+                    "type": "address",
+                    "description": "Used to filter based on state",
+                    "on": [
+                      {
+                        "from": "1icvhwkddx3p8gifyhmjpxpqfr",
+                        "event": "member-status-filter"
+                      }
+                    ]
+                  },
+                  "auto-update": {
+                    "type": "boolean",
+                    "description": "Used to filter based on state",
+                    "on": []
+                  }
+                },
+                "styles": {
+                  "height": "400",
+                  "borders": true,
+                  "titlePosition": "left",
+                  "title": "Member Count"
+                },
+                "locale_titles": {
+                  "en-US": "Member Count"
+                },
+                "settings": {}
+              }
+            }
+          ],
+          "c": [
+            {
+              "id": "2rq4foxv69spc286s1dx1rlik9",
+              "content": {
+                "id": "Member_Update",
+                "title": "Member Status",
+                "type": "gadget",
+                "thumbnail": "local://store/carbon.super/gadget/usa-business-revenue/index.png",
+                "data": {
+                  "url": "local://store/carbon.super/gadget/Member_Status/index.xml"
+                },
+                "listen": {
+                  "member-status-filter": {
+                    "type": "address",
+                    "description": "Used to filter based on state",
+                    "on": [
+                      {
+                        "from": "1icvhwkddx3p8gifyhmjpxpqfr",
+                        "event": "member-status-filter"
+                      }
+                    ]
+                  },
+                  "auto-update": {
+                    "type": "boolean",
+                    "description": "Used to filter based on state",
+                    "on": []
+                  }
+                },
+                "styles": {
+                  "height": "800",
+                  "borders": true,
+                  "titlePosition": "left",
+                  "title": "Member Status"
+                },
+                "locale_titles": {
+                  "en-US": "Member Status"
+                },
+                "settings": {}
+              }
+            }
+          ]
+        },
+        "anon": {}
+      }
+    },
+    {
+      "id": "member-details",
+      "title": "Member Details",
+      "layout": {
+        "content": {
+          "loggedIn": {
+            "blocks": [
+              {
+                "id": "a",
+                "col": 1,
+                "row": 1,
+                "size_x": 12,
+                "size_y": 1,
+                "banner": false
+              },
+              {
+                "id": "b",
+                "col": 1,
+                "row": 2,
+                "size_x": 12,
+                "size_y": 9,
+                "banner": false
+              }
+            ]
+          }
+        },
+        "fluidLayout": false
+      },
+      "isanon": false,
+      "content": {
+        "default": {
+          "a": [
+            {
+              "id": "rio4byw7i0qlqiygsdp1fw29",
+              "content": {
+                "id": "Member_Details_Filter",
+                "title": "",
+                "type": "gadget",
+                "thumbnail": "store://gadget/Member_Details_Filter/index.png",
+                "data": {
+                  "url": "store://gadget/Member_Details_Filter/index.xml"
+                },
+                "styles": {
+                  "height": "100",
+                  "borders": false,
+                  "titlePosition": "left",
+                  "title": ""
+                },
+                "notify": {
+                  "member-details-filter": {
+                    "type": "address",
+                    "description": "This notifies applicationId and clusterId"
+                  }
+                },
+                "cancel": {
+                  "type": "boolean",
+                  "description": "This notifies cancellation of state selection"
+                },
+                "options": {},
+                "locale_titles": {
+                  "en-US": ""
+                },
+                "settings": {}
+              }
+            }
+          ],
+          "b": [
+            {
+              "id": "31avp60ninmk9mno08eh2xogvi",
+              "content": {
+                "id": "Member_Details",
+                "title": "Member Details",
+                "type": "gadget",
+                "thumbnail": "local://store/carbon.super/gadget/usa-business-revenue/index.png",
+                "data": {
+                  "url": "local://store/carbon.super/gadget/Member_Information/index.xml"
+                },
+                "listen": {
+                  "member-details-filter": {
+                    "type": "address",
+                    "description": "Used to filter based on state",
+                    "on": [
+                      {
+                        "from": "rio4byw7i0qlqiygsdp1fw29",
+                        "event": "member-details-filter"
+                      }
+                    ]
+                  },
+                  "auto-update": {
+                    "type": "boolean",
+                    "description": "Used to filter based on state"
+                  }
+                },
+                "styles": {
+                  "height": "1200",
+                  "borders": true,
+                  "titlePosition": "left",
+                  "title": "Member Details"
+                },
+                "locale_titles": {
+                  "en-US": "Member Details"
+                },
+                "settings": {}
+              }
+            }
+          ]
+        },
+        "anon": {}
+      }
+    },
+    {
+      "id": "tenant-metering",
+      "title": "Tenant Metering",
+      "layout": {
+        "content": {
+          "loggedIn": {
+            "blocks": [
+              {
+                "id": "a",
+                "col": 1,
+                "row": 1,
+                "size_x": 12,
+                "size_y": 1,
+                "banner": false
+              },
+              {
+                "id": "b",
+                "col": 1,
+                "row": 2,
+                "size_x": 12,
+                "size_y": 7,
+                "banner": false
+              }
+            ]
+          }
+        },
+        "fluidLayout": false
+      },
+      "isanon": false,
+      "content": {
+        "default": {
+          "a": [
+            {
+              "id": "2p064k6c1rkcoy68zprzggmn29",
+              "content": {
+                "id": "Application_Signups_Filter",
+                "title": "",
+                "type": "gadget",
+                "thumbnail": "store://gadget/Application_Signups_Filter/index.png",
+                "data": {
+                  "url": "store://gadget/Application_Signups_Filter/index.xml"
+                },
+                "styles": {
+                  "height": "100",
+                  "borders": false,
+                  "titlePosition": "left",
+                  "title": ""
+                },
+                "notify": {
+                  "application-signups-filter": {
+                    "type": "address",
+                    "description": "This notifies applicationId"
+                  }
+                },
+                "cancel": {
+                  "type": "boolean",
+                  "description": "This notifies cancellation of state selection"
+                },
+                "options": {},
+                "locale_titles": {
+                  "en-US": ""
+                },
+                "settings": {}
+              }
+            }
+          ],
+          "b": [
+            {
+              "id": "izak0xb74cpja530r4kg9zfr",
+              "content": {
+                "id": "Application_Signups",
+                "title": "Tenant Metering",
+                "type": "gadget",
+                "thumbnail": "local://images/gadgetIcon.png",
+                "data": {
+                  "url": "local://store/carbon.super/gadget/Application_Signups/index.xml"
+                },
+                "listen": {
+                  "application-signups-filter": {
+                    "type": "address",
+                    "description": "Used to filter based on state",
+                    "on": [
+                      {
+                        "from": "2p064k6c1rkcoy68zprzggmn29",
+                        "event": "application-signups-filter"
+                      }
+                    ]
+                  },
+                  "auto-update": {
+                    "type": "boolean",
+                    "description": "Used to filter based on state"
+                  }
+                },
+                "styles": {
+                  "height": "800",
+                  "borders": true,
+                  "titlePosition": "left",
+                  "title": "Tenant Metering"
+                },
+                "locale_titles": {
+                  "en-US": "Tenant Metering"
+                },
+                "settings": {}
+              }
+            }
+          ]
+        },
+        "anon": {}
+      }
+    }
+  ],
+  "identityServerUrl": "",
+  "accessTokenUrl": "",
+  "apiKey": "",
+  "apiSecret": "",
+  "banner": {
+    "globalBannerExists": null,
+    "customBannerExists": null
+  },
+  "landing": "landing",
+  "isanon": false,
+  "isUserCustom": false
+}
